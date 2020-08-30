@@ -1,0 +1,6 @@
+<div class="nested-fields input-group mb-3">
+    <%= f.text_field :item, label: false, :class => "form-control", required: true %>
+    <div class="input-group-append">
+        <%= link_to_remove_association "Remove", f, :class => "ingredientRemove btn btn-outline-secondary" %>
+    </div>
+</div>

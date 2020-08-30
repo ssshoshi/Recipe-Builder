@@ -1,0 +1,7 @@
+<%= javascript_include_tag 'form' %>
+<div class="container">
+    <h1>Create Recipe</h1>
+    <%= form_with model: @recipe do |f| %>
+        <%= render 'form', f: f%>
+    <% end %>
+<div>

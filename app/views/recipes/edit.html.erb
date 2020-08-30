@@ -1,0 +1,7 @@
+<%= javascript_include_tag 'form' %>
+<div class="container form">
+<h1>Edit Recipe</h1>
+<%= form_with model: @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+    <%= render 'form', f: f%>
+<% end %>
+<div>

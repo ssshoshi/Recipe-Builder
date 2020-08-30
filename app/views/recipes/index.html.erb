@@ -1,0 +1,45 @@
+<%= javascript_include_tag 'application' %>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light box-shadow shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="container d-flex justify-content-between">
+      <a class="d-flex align-items-center navbar-brand" href="/">
+        <img src="/img/HES-logo.png"  class="d-inline-block align-top" alt="HES Recipes">
+        Recipes
+      </a>
+      <a><%= link_to "Create Recipe", new_recipe_path, {:class => "btn btn-success nav-item link"} %></a>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <p>Please choose from the list of recipes below.</p>
+
+  <table class="table table-sm">
+    <tr>
+      <th>Title</th>
+      <td><strong>Servings</strong></th>
+      <td><strong>Cook time</strong></th>
+      <td><strong>Prep time</strong></th>
+      <td><strong>Total time</strong></th>
+    </tr>
+
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <th><%= link_to recipe.title, recipe,  {:class => "link"} %></td>
+        <td><%= recipe.servings %></td>
+        <td><%= recipe.cook_time %></td>
+        <td><%= recipe.prep_time %></td>
+        <td><%= total_time(recipe) %></td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>
+<footer class="footer bg-light">
+  <div class="container">
+    <span class="text-muted">
+      &copy; 2020 Health Enhancement Systems
+    </span> 
+  </div>
+</footer>
+   
+  
