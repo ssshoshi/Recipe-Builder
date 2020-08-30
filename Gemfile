@@ -5,7 +5,7 @@ gem 'rails', '~> 5.1.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'json'
 
@@ -16,6 +16,7 @@ gem 'country_select', '~> 4.0'
 gem 'nested_form_fields'
 
 gem 'cocoon'
+
 
 
 # To use ActiveModel has_secure_password
